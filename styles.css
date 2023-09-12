@@ -3,6 +3,7 @@ body{
     background: #F4FDFF;
     font-size: 100%;
     font-family: 'DM Sans';
+    overflow: hidden;
 }
 
 #title{
