@@ -1,12 +1,12 @@
 function lonLatSucces(pos) {
     var crd = pos.coords;
-    var timestamp = pos.timestamp;
+    var timestamp = new Date(pos.timestamp);
 
     document.getElementById('lonRes').textContent = (crd.longitude).toFixed(2);
     document.getElementById('latRes').textContent = (crd.latitude).toFixed(2);
+    document.getElementById('tsRes').textContent = timestamp.toLocaleString('fr');
     document.getElementById('altRes').textContent = (crd.altitude).toFixed(2);
     document.getElementById('vitRes').textContent = (crd.speed).toFixed(2);
-    document.getElementById('tsRes').textContent = new Date(timestamp);
 
 
 
