@@ -27,3 +27,32 @@ var lonLatOptions = {
 document.addEventListener("DOMContentLoaded", (event) => {
     navigator.geolocation.getCurrentPosition(lonLatSucces,lonLatError, lonLatOptions);
 });
+
+if (window.DeviceOrientationEvent) {
+    window.addEventListener(
+      "deviceorientation",
+      function (event) {
+        // alpha : rotation autour de l'axe z
+        var rotateDegrees = event.alpha;
+        // gamma : de gauche à droite
+        var leftToRight = event.gamma;
+        // bêta : mouvement avant-arrière
+        var frontToBack = event.beta;
+  
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+      },
+      true,
+    );
+  }
+  
+  var handleOrientationEvent = function (
+    frontToBack,
+    leftToRight,
+    rotateDegrees,
+  ) {
+    document.getElementById('alphaRes').textContent = rotateDegrees;
+    document.getElementById('betaRes').textContent = frontToBack;
+    document.getElementById('gammaRes').textContent = leftToRight;
+    
+  };
+  
