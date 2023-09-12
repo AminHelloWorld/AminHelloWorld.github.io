@@ -1,0 +1,12 @@
+body{
+    background: magenta;
+    font-size: 100%;
+}
+
+#coordsContainer{
+    background-color: blueviolet;
+    width: 50vw;
+    height: 8em;
+    margin: auto;
+    margin-top: 3em;
+}
