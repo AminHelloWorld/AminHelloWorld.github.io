@@ -32,8 +32,8 @@ var handleOrientationEvent = function (
 
 };
 function handleMotionEvent(event){
-    document.getElementById('accRes').textContent = `x : ${(event.accelerationIncludingGravity.x).toFixed(2)},<br></br> y : ${(event.accelerationIncludingGravity.y).toFixed(2)},<br></br> z : ${(event.accelerationIncludingGravity.z).toFixed(2)} `;
-    document.getElementById('rotRes').textContent = `x : ${(event.rotationRate.x).toFixed(2)},<br></br> y : ${(event.rotationRate.y).toFixed(2)},<br></br> z : ${(event.rotationRate.z).toFixed(2)} `;
+    document.getElementById('accRes').innerHTML = `x : ${(event.accelerationIncludingGravity.x).toFixed(2)},<br></br> y : ${(event.accelerationIncludingGravity.y).toFixed(2)},<br></br> z : ${(event.accelerationIncludingGravity.z).toFixed(2)} `;
+    document.getElementById('rotRes').innerHTML = `x : ${(event.rotationRate.x).toFixed(2)},<br></br> y : ${(event.rotationRate.y).toFixed(2)},<br></br> z : ${(event.rotationRate.z).toFixed(2)} `;
 
 }
 
