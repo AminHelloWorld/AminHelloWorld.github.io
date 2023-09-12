@@ -1,10 +1,10 @@
 function lonLatSucces(pos) {
     var crd = pos.coords;
 
-    document.getElementById('lonRes').textContent = crd.longitude;
-    document.getElementById('latRes').textContent = crd.latitude;
-    document.getElementById('altRes').textContent = crd.altitude;
-    document.getElementById('vitRes').textContent = crd.speed;
+    document.getElementById('lonRes').textContent = (crd.longitude).toFixed(2);
+    document.getElementById('latRes').textContent = (crd.latitude).toFixed(2);
+    document.getElementById('altRes').textContent = (crd.altitude).toFixed(2);
+    document.getElementById('vitRes').textContent = (crd.speed).toFixed(2);
 
 
 
@@ -26,14 +26,14 @@ var handleOrientationEvent = function (
     leftToRight,
     rotateDegrees,
 ) {
-    document.getElementById('alphaRes').textContent = rotateDegrees;
-    document.getElementById('betaRes').textContent = frontToBack;
-    document.getElementById('gammaRes').textContent = leftToRight;
+    document.getElementById('alphaRes').textContent = (rotateDegrees).toFixed(2);
+    document.getElementById('betaRes').textContent = (frontToBack).toFixed(2);
+    document.getElementById('gammaRes').textContent = (leftToRight).toFixed(2);
 
 };
 function handleMotionEvent(event){
-    document.getElementById('accRes').textContent = event.accelerationIncludingGravity;
-    document.getElementById('rotRes').textContent = event.rotationRate;
+    document.getElementById('accRes').textContent = `x : ${(event.accelerationIncludingGravity.x).toFixed(2)},<br></br> y : ${(event.accelerationIncludingGravity.y).toFixed(2)},<br></br> z : ${(event.accelerationIncludingGravity.z).toFixed(2)} `;
+    document.getElementById('rotRes').textContent = `x : ${(event.rotationRate.x).toFixed(2)},<br></br> y : ${(event.rotationRate.y).toFixed(2)},<br></br> z : ${(event.rotationRate.z).toFixed(2)} `;
 
 }
 
