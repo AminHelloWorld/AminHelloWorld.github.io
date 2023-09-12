@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'bababooey';
+    src: url('./planet_kosmos/PlanetKosmos.eot'); /* IE9 Compat Modes */
+    src: url('./planet_kosmos/PlanetKosmos.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./planet_kosmos/PlanetKosmos.woff') format('woff'), /* Modern Browsers */
+         url('./planet_kosmos/PLANK___.TTF')  format('truetype'), /* Safari, Android, iOS */
+         url('./planet_kosmos/PlanetKosmos.svg#svgbababooey') format('svg'); /* Legacy iOS */
+}
 body{
     background: magenta;
     font-size: 100%;
+    font-family: 'bababooey';
 }
 
 #coordsContainer{
@@ -9,4 +18,49 @@ body{
     height: 8em;
     margin: auto;
     margin-top: 3em;
+    color: darkblue;
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+.rainbow{
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
 }
