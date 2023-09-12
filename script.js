@@ -4,6 +4,7 @@ function lonLatSucces(pos){
     document.getElementById('lonRes').textContent = crd.longitude;
     document.getElementById('latRes').textContent = crd.latitude;
     document.getElementById('altRes').textContent = crd.altitude;
+    document.getElementById('vitRes').textContent = crd.speed;
     
 
 
