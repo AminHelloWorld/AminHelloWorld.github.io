@@ -41,6 +41,7 @@ function handleMotionEvent(event){
 }
 
 function handleTouch(event){
+    document.getElementById('TERes').textContent = event.touchType;
     document.getElementById('TXRes').textContent = (event.touches[0].clientX).toFixed(2);
     document.getElementById('TYRes').textContent = (event.touches[0].clientY).toFixed(2);
 
