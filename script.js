@@ -40,11 +40,33 @@ function handleMotionEvent(event){
 
 }
 
+function handleTouch(event){
+    document.getElementById('TXRes').textContent = (event.touches[0].clientX).toFixed(2);
+    document.getElementById('TYRes').textContent = (event.touches[0].clientY).toFixed(2);
 
 
+}
 
-document.addEventListener("DOMContentLoaded", (event) => {
+
+window.addEventListener("DOMContentLoaded", (event) => {
     navigator.geolocation.getCurrentPosition(lonLatSucces, lonLatError, lonLatOptions);
+    
+    window.addEventListener("touchstart", (event) => {
+        event.touchType = "Touch Start";
+        handleTouch(event);
+    });
+    window.addEventListener("touchend", (event) => {
+        event.touchType = "Touch End";
+        handleTouch(event); 
+    });
+    el.addEventListener("touchcancel", (event) => {
+        event.touchType = "Touch Cancel";
+        handleTouch(event);
+    });
+    el.addEventListener("touchmove", (event) => {
+        event.touchType = "Touch Move";
+        handleTouch(event);
+    });
 });
 
 if (window.DeviceOrientationEvent) {
