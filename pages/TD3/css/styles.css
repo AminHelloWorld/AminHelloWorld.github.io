@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+body{
+    background: #F4FDFF;
+    font-size: 100%;
+    font-family: 'DM Sans', serif;
+}
+
+#title{
+    background-color: #5B7553;
+    border: solid 2px #040403;
+    width: 80vw;
+    height: fit-content;
+    margin: 1em auto auto;
+}
+
+#title>h1{
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.container{
+    padding: 1em;
+    background-color: #5B7553;
+    border: solid 2px #040403;
+    width: 50vw;
+    height: fit-content;
+    margin: 1em auto auto;
+}
+
+.container h2{
+    border: solid 2px #F4FDFF;
+    margin: 0 auto 1em auto;
+}
+
+canvas{
+    margin: auto;
+    display: block;
+}
