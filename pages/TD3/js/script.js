@@ -1,10 +1,12 @@
 import * as THREE from "three";
 
+import plage from "../img/plage.jpg";
+
 const canvas = document.getElementById("plage");
 const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = "./img/plage.jpg";
+img.src = plage;
 
 img.onload = function () {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
